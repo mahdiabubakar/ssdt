@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState } from 'react';
 
-import UserContext from '../../context/user/userContext';
+// import UserContext from '../../context/user/userContext';
 
 function Navbar() {
   // useContext initialization
-  const userContext = useContext(UserContext);
+  // const userContext = useContext(UserContext);
 
   // Menu State
   const [menu, setMenu] = useState('home');
