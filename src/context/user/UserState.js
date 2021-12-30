@@ -13,27 +13,6 @@ const UserState = props => {
 
   const [state, dispatch] = useReducer(UserReducer, initialState);
 
-  // Get User
-  const getUser = async () => {
-    setLoading();
-
-    try {
-      const res = await axios.get(
-        `${process.env.REACT_APP_API_KEY}/api/bios/nigeriancoder`,
-      );
-
-      dispatch({
-        type: GET_USER,
-        payload: res.data,
-      });
-    } catch (err) {
-      dispatch({
-        type: USER_ERROR,
-        payload: err,
-      });
-    }
-  };
-
   useEffect(() => {
     const func = async () => {
       setLoading();
@@ -62,7 +41,7 @@ const UserState = props => {
       value={{
         user: state.user,
         loading: state.loading,
-        getUser,
+
         setLoading,
       }}>
       {props.children}
