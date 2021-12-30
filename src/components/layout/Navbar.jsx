@@ -30,8 +30,6 @@ function Navbar() {
   //   // eslint-disable-next-line
   // }, []);
 
-  console.log(menu);
-
   return (
     <header className='header' id='header'>
       <nav className='nav container'>
