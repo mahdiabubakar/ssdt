@@ -6,14 +6,14 @@ export default (state, action) => {
     case GET_USER:
       return {
         ...state,
-        user: action.payload,
         loading: false,
+        user: action.payload,
       };
     case USER_ERROR:
       return {
         ...state,
-        error: action.payload,
         loading: false,
+        error: action.payload,
       };
     case SET_LOADING:
       return {

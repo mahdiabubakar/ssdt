@@ -1,21 +1,23 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/layout/Navbar';
-import Skills from './components/Skills';
+import Skills from './components/layout/Skills';
+import AlertState from './context/alert/AlertState';
 import UserState from './context/user/UserState';
 
 function App() {
   return (
     <UserState>
-      <Router>
-        <div>
-          <Navbar />
-        </div>
-        <div className='container'>
-          <h1>Hello world</h1>
-          <Skills />
-        </div>
-      </Router>
+      <AlertState>
+        <Router>
+          <div>
+            <Navbar />
+          </div>
+          <div className='container'>
+            <Skills />
+          </div>
+        </Router>
+      </AlertState>
     </UserState>
   );
 }
