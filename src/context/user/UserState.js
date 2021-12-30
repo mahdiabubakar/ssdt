@@ -18,7 +18,9 @@ const UserState = props => {
     setLoading();
 
     try {
-      const res = await axios.get('/api/bios/nigeriancoder');
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_KEY}/api/bios/nigeriancoder`,
+      );
 
       dispatch({
         type: GET_USER,
